@@ -4,7 +4,9 @@ import com.orcchg.domain.CryptoRepository
 import com.orcchg.domain.model.Coin
 import com.orcchg.domain.model.CoinsPage
 
-internal class InMemoryCryptoRepository : CryptoRepository {
+internal class InMemoryCryptoRepository(
+    private val coinPriceRepository: CoinPriceRepository
+) : CryptoRepository {
 
     override suspend fun coins(limit: Int, offset: Int): CoinsPage {
         if (limit < 0 || offset < 0) {
@@ -15,8 +17,10 @@ internal class InMemoryCryptoRepository : CryptoRepository {
         }
 
         val beyondLast = (offset + limit).coerceAtMost(allCoins.size)
-        val coins = allCoins.subList(fromIndex = offset, toIndex = beyondLast)
-        return CoinsPage(coins = coins, offset = offset, total = allCoins.size)
+        val pricedCoins = allCoins.subList(fromIndex = offset, toIndex = beyondLast)
+            .mapNotNull { coin -> coinPriceRepository.getPrice(index = coin.index) }
+
+        return CoinsPage(coins = pricedCoins, offset = offset, total = allCoins.size)
     }
 
     private val allCoins = listOf(
