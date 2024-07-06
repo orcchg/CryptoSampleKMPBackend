@@ -1,5 +1,9 @@
 package com.orcchg.domain.model
 
+import com.orcchg.util.BigDecimalSerializer
+import com.orcchg.util.CurrencySerializer
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import java.math.BigDecimal
 import java.math.RoundingMode
 import java.text.NumberFormat
@@ -15,10 +19,11 @@ private val exoticCurrencyAmount by lazy(LazyThreadSafetyMode.NONE) { ".*\\s+[a-
  * @param currency money currency
  * @param sign money sign, represents expense (-) or income (+) operation
  */
+@Serializable
 data class Money private constructor(
-    val amount: BigDecimal,
-    val currency: Currency,
-    val sign: MoneySign
+    @SerialName("amount") @Serializable(BigDecimalSerializer::class) val amount: BigDecimal,
+    @SerialName("currency") @Serializable(CurrencySerializer::class) val currency: Currency,
+    @SerialName("sign") val sign: MoneySign
 ) {
 
     /**

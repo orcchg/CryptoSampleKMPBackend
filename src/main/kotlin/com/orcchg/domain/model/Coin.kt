@@ -1,11 +1,15 @@
 package com.orcchg.domain.model
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 sealed class Coin(
-    val index: Long,
-    val name: String,
-    val symbol: String,
-    val url: String,
-    val logoUrl: String
+    @SerialName("index") val index: Long,
+    @SerialName("name") val name: String,
+    @SerialName("symbol") val symbol: String,
+    @SerialName("url") val url: String,
+    @SerialName("logoUrl") val logoUrl: String
 ) {
     data object Bitcoin : Coin(
         index = 0L,

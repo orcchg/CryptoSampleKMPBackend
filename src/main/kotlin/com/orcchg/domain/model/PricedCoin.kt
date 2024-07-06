@@ -1,7 +1,11 @@
 package com.orcchg.domain.model
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class PricedCoin(
-    val coin: Coin,
-    val price: Money,
-    val delta: Money
+    @SerialName("coin") val coin: Coin,
+    @SerialName("price") val price: Money,
+    @SerialName("delta") val delta: Money
 )
