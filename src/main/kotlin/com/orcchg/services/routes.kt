@@ -12,8 +12,8 @@ internal fun Application.configureRoutes(repository: CryptoRepository) {
             runCatching {
                 val params = call.request.queryParameters
                 repository.coins(
-                    limit = params["limit"]?.toInt() ?: throw IllegalArgumentException("limit null"),
-                    offset = params["offset"]?.toInt() ?: throw IllegalArgumentException("offset null"),
+                    limit = params["limit"]?.toInt() ?: 0,
+                    offset = params["offset"]?.toInt() ?: 0,
                 )
             }
                 .onSuccess {

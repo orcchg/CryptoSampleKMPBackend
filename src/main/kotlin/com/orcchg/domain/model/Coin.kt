@@ -11,6 +11,7 @@ sealed class Coin(
     @SerialName("url") val url: String,
     @SerialName("logoUrl") val logoUrl: String
 ) {
+    @Serializable
     data object Bitcoin : Coin(
         index = 0L,
         name = "Bitcoin",
@@ -19,6 +20,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitcoin/info/logo.png"
     )
 
+    @Serializable
     data object Litecoin : Coin(
         index = 2L,
         name = "Litecoin",
@@ -27,6 +29,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/litecoin/info/logo.png"
     )
 
+    @Serializable
     data object Dogecoin : Coin(
         index = 3L,
         name = "Dogecoin",
@@ -35,6 +38,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/doge/info/logo.png"
     )
 
+    @Serializable
     data object Dash : Coin(
         index = 5L,
         name = "Dash",
@@ -43,6 +47,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/dash/info/logo.png"
     )
 
+    @Serializable
     data object Viacoin : Coin(
         index = 14L,
         name = "Viacoin",
@@ -51,6 +56,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/viacoin/info/logo.png"
     )
 
+    @Serializable
     data object Groestlcoin : Coin(
         index = 17L,
         name = "Groestlcoin",
@@ -59,6 +65,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/groestlcoin/info/logo.png"
     )
 
+    @Serializable
     data object DigiByte : Coin(
         index = 20L,
         name = "DigiByte",
@@ -67,6 +74,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/digibyte/info/logo.png"
     )
 
+    @Serializable
     data object Monacoin : Coin(
         index = 22L,
         name = "Monacoin",
@@ -75,6 +83,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/monacoin/info/logo.png"
     )
 
+    @Serializable
     data object Decred : Coin(
         index = 42L,
         name = "Decred",
@@ -83,6 +92,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/decred/info/logo.png"
     )
 
+    @Serializable
     data object Syscoin : Coin(
         index = 57L,
         name = "Syscoin",
@@ -91,6 +101,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/syscoin/info/logo.png"
     )
 
+    @Serializable
     data object Ethereum : Coin(
         index = 60L,
         name = "Ethereum",
@@ -99,6 +110,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/info/logo.png"
     )
 
+    @Serializable
     data object EthereumClassic : Coin(
         index = 61L,
         name = "Ethereum Classic",
@@ -107,6 +119,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/classic/info/logo.png"
     )
 
+    @Serializable
     data object Icon : Coin(
         index = 74L,
         name = "ICON",
@@ -115,6 +128,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/icon/info/logo.png"
     )
 
+    @Serializable
     data object Verge : Coin(
         index = 77L,
         name = "Verge",
@@ -123,6 +137,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/verge/info/logo.png"
     )
 
+    @Serializable
     data object CosmosHub : Coin(
         index = 118L,
         name = "Cosmos Hub",
@@ -131,6 +146,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/cosmos/info/logo.png"
     )
 
+    @Serializable
     data object Pivx : Coin(
         index = 119L,
         name = "Pivx",
@@ -139,6 +155,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/pivx/info/logo.png"
     )
 
+    @Serializable
     data object Zen : Coin(
         index = 121L,
         name = "Zen",
@@ -147,6 +164,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zen/info/logo.png"
     )
 
+    @Serializable
     data object Zcash : Coin(
         index = 133L,
         name = "Zcash",
@@ -155,6 +173,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zcash/info/logo.png"
     )
 
+    @Serializable
     data object Firo : Coin(
         index = 136L,
         name = "Firo",
@@ -163,6 +182,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/firo/info/logo.png"
     )
 
+    @Serializable
     data object Rootstock : Coin(
         index = 137L,
         name = "Rootstock",
@@ -171,6 +191,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/rootstock/info/logo.png"
     )
 
+    @Serializable
     data object Komodo : Coin(
         index = 141L,
         name = "Komodo",
@@ -179,6 +200,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/komodo/info/logo.png"
     )
 
+    @Serializable
     data object Ripple : Coin(
         index = 144L,
         name = "Ripple",
@@ -187,6 +209,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ripple/info/logo.png"
     )
 
+    @Serializable
     data object BitcoinCash : Coin(
         index = 145L,
         name = "Bitcoin Cash",
@@ -195,6 +218,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitcoincash/info/logo.png"
     )
 
+    @Serializable
     data object Nebl : Coin(
         index = 146L,
         name = "Nebl",
@@ -203,6 +227,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/Nebl/info/logo.png"
     )
 
+    @Serializable
     data object Stellar : Coin(
         index = 148L,
         name = "Stellar",
@@ -211,6 +236,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/stellar/info/logo.png"
     )
 
+    @Serializable
     data object BitcoinGold : Coin(
         index = 156L,
         name = "Bitcoin Gold",
@@ -219,6 +245,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitcoingold/info/logo.png"
     )
 
+    @Serializable
     data object Nano : Coin(
         index = 165L,
         name = "Nano",
@@ -227,6 +254,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nano/info/logo.png"
     )
 
+    @Serializable
     data object MantaPacific : Coin(
         index = 169L,
         name = "Manta Pacific",
@@ -235,6 +263,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/manta/info/logo.png"
     )
 
+    @Serializable
     data object Ravencoin : Coin(
         index = 175L,
         name = "Ravencoin",
@@ -243,6 +272,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ravencoin/info/logo.png"
     )
 
+    @Serializable
     data object PoaNetwork : Coin(
         index = 178L,
         name = "POA Network",
@@ -251,6 +281,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/poa/info/logo.png"
     )
 
+    @Serializable
     data object Eos : Coin(
         index = 194L,
         name = "Eos",
@@ -259,6 +290,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/eos/info/logo.png"
     )
 
+    @Serializable
     data object Tron : Coin(
         index = 195L,
         name = "Tron",
@@ -267,6 +299,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/tron/info/logo.png"
     )
 
+    @Serializable
     data object OpBNB : Coin(
         index = 204L,
         name = "OpBNB",
@@ -275,6 +308,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/opbnb/info/logo.png"
     )
 
+    @Serializable
     data object InternetComputer : Coin(
         index = 223L,
         name = "Internet Computer",
@@ -283,6 +317,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/internet_computer/info/logo.png"
     )
 
+    @Serializable
     data object Fio : Coin(
         index = 235L,
         name = "Fio",
@@ -291,6 +326,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/fio/info/logo.png"
     )
 
+    @Serializable
     data object Nimiq : Coin(
         index = 242L,
         name = "Nimiq",
@@ -299,6 +335,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nimiq/info/logo.png"
     )
 
+    @Serializable
     data object Algorand : Coin(
         index = 283L,
         name = "Algorand",
@@ -307,6 +344,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/algorand/info/logo.png"
     )
 
+    @Serializable
     data object Iost : Coin(
         index = 291L,
         name = "Iost",
@@ -315,6 +353,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/iost/info/logo.png"
     )
 
+    @Serializable
     data object IoTeX : Coin(
         index = 304L,
         name = "IoTeX",
@@ -323,6 +362,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/iotex/info/logo.png"
     )
 
+    @Serializable
     data object Nervos : Coin(
         index = 309L,
         name = "Nervos",
@@ -331,6 +371,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nervos/info/logo.png"
     )
 
+    @Serializable
     data object Zilliqa : Coin(
         index = 313L,
         name = "Zilliqa",
@@ -339,6 +380,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zilliqa/info/logo.png"
     )
 
+    @Serializable
     data object TerraClassic : Coin(
         index = 330L,
         name = "Terra Classic",
@@ -347,6 +389,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/terra/info/logo.png"
     )
 
+    @Serializable
     data object Polkadot : Coin(
         index = 354L,
         name = "Polkadot",
@@ -355,6 +398,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polkadot/info/logo.png"
     )
 
+    @Serializable
     data object ThetaFuel : Coin(
         index = 361L,
         name = "Theta Fuel",
@@ -363,6 +407,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/tfuelevm/info/logo.png"
     )
 
+    @Serializable
     data object CryptoOrg : Coin(
         index = 394L,
         name = "Crypto.org",
@@ -371,6 +416,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/cryptoorg/info/logo.png"
     )
 
+    @Serializable
     data object Everscale : Coin(
         index = 396L,
         name = "Everscale",
@@ -379,6 +425,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/everscale/info/logo.png"
     )
 
+    @Serializable
     data object Near : Coin(
         index = 397L,
         name = "Near",
@@ -387,6 +434,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/near/info/logo.png"
     )
 
+    @Serializable
     data object Aion : Coin(
         index = 425L,
         name = "Aion",
@@ -395,6 +443,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/aion/info/logo.png"
     )
 
+    @Serializable
     data object Kusama : Coin(
         index = 434L,
         name = "Kusama",
@@ -403,6 +452,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/kusama/info/logo.png"
     )
 
+    @Serializable
     data object Aeternity : Coin(
         index = 457L,
         name = "Aeternity",
@@ -411,6 +461,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/aeternity/info/logo.png"
     )
 
+    @Serializable
     data object Kava : Coin(
         index = 459L,
         name = "Kava",
@@ -419,6 +470,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/kava/info/logo.png"
     )
 
+    @Serializable
     data object Filecoin : Coin(
         index = 461L,
         name = "Filecoin",
@@ -427,6 +479,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/filecoin/info/logo.png"
     )
 
+    @Serializable
     data object Oasis : Coin(
         index = 474L,
         name = "Oasis",
@@ -435,6 +488,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/oasis/info/logo.png"
     )
 
+    @Serializable
     data object Bluzelle : Coin(
         index = 483L,
         name = "Bluzelle",
@@ -443,6 +497,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bluzelle/info/logo.png"
     )
 
+    @Serializable
     data object BandChain : Coin(
         index = 494L,
         name = "BandChain",
@@ -451,6 +506,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/band/info/logo.png"
     )
 
+    @Serializable
     data object Theta : Coin(
         index = 500L,
         name = "Theta",
@@ -459,6 +515,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/theta/info/logo.png"
     )
 
+    @Serializable
     data object Solana : Coin(
         index = 501L,
         name = "Solana",
@@ -467,6 +524,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/solana/info/logo.png"
     )
 
+    @Serializable
     data object MultiversX : Coin(
         index = 508L,
         name = "MultiversX",
@@ -475,6 +533,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/elrond/info/logo.png"
     )
 
+    @Serializable
     data object Secret : Coin(
         index = 529L,
         name = "Secret",
@@ -483,6 +542,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/secret/info/logo.png"
     )
 
+    @Serializable
     data object Agoric : Coin(
         index = 564L,
         name = "Agoric",
@@ -491,6 +551,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/agoric/info/logo.png"
     )
 
+    @Serializable
     data object Ton : Coin(
         index = 607L,
         name = "Ton",
@@ -499,6 +560,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ton/info/logo.png"
     )
 
+    @Serializable
     data object Aptos : Coin(
         index = 637L,
         name = "Aptos",
@@ -507,6 +569,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/aptos/info/logo.png"
     )
 
+    @Serializable
     data object BNBBeaconChain : Coin(
         index = 714L,
         name = "BNB Beacon Chain",
@@ -515,6 +578,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/binance/info/logo.png"
     )
 
+    @Serializable
     data object Sui : Coin(
         index = 784L,
         name = "Sui",
@@ -523,6 +587,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/sui/info/logo.png"
     )
 
+    @Serializable
     data object Acala : Coin(
         index = 787L,
         name = "Acala",
@@ -531,6 +596,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/acala/info/logo.png"
     )
 
+    @Serializable
     data object VeChain : Coin(
         index = 818L,
         name = "VeChain",
@@ -539,6 +605,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/vechain/info/logo.png"
     )
 
+    @Serializable
     data object Callisto : Coin(
         index = 820L,
         name = "Callisto",
@@ -547,6 +614,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/callisto/info/logo.png"
     )
 
+    @Serializable
     data object Neo : Coin(
         index = 888L,
         name = "Neo",
@@ -555,6 +623,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/neo/info/logo.png"
     )
 
+    @Serializable
     data object Viction : Coin(
         index = 889L,
         name = "Viction",
@@ -563,6 +632,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/viction/info/logo.png"
     )
 
+    @Serializable
     data object ECash : Coin(
         index = 899L,
         name = "eCash",
@@ -571,6 +641,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ecash/info/logo.png"
     )
 
+    @Serializable
     data object THORChain : Coin(
         index = 931L,
         name = "THORChain",
@@ -579,6 +650,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/thorchain/info/logo.png"
     )
 
+    @Serializable
     data object Polygon : Coin(
         index = 966L,
         name = "Polygon",
@@ -587,6 +659,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygon/info/logo.png"
     )
 
+    @Serializable
     data object OKXChain : Coin(
         index = 996L,
         name = "OKX Chain",
@@ -595,6 +668,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/okc/info/logo.png"
     )
 
+    @Serializable
     data object BitcoinDiamond : Coin(
         index = 999L,
         name = "Bitcoin Diamond",
@@ -603,6 +677,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bitcoindiamond/info/logo.png"
     )
 
+    @Serializable
     data object ThunderCore : Coin(
         index = 1001L,
         name = "ThunderCore",
@@ -611,6 +686,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/thundertoken/info/logo.png"
     )
 
+    @Serializable
     data object Harmony : Coin(
         index = 1023L,
         name = "Harmony",
@@ -619,6 +695,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/harmony/info/logo.png"
     )
 
+    @Serializable
     data object Ontology : Coin(
         index = 1024L,
         name = "Ontology",
@@ -627,6 +704,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ontology/info/logo.png"
     )
 
+    @Serializable
     data object ConfluxESpace : Coin(
         index = 1030L,
         name = "Conflux eSpace",
@@ -635,6 +713,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/cfxevm/info/logo.png"
     )
 
+    @Serializable
     data object Tezos : Coin(
         index = 1729L,
         name = "Tezos",
@@ -643,6 +722,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/tezos/info/logo.png"
     )
 
+    @Serializable
     data object Cardano : Coin(
         index = 1815L,
         name = "Cardano",
@@ -651,6 +731,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/cardano/info/logo.png"
     )
 
+    @Serializable
     data object LightlinkPhoenix : Coin(
         index = 1890L,
         name = "Lightlink Phoenix",
@@ -659,6 +740,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/lightlink/info/logo.png"
     )
 
+    @Serializable
     data object Qtum : Coin(
         index = 2301L,
         name = "Qtum",
@@ -667,6 +749,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/qtum/info/logo.png"
     )
 
+    @Serializable
     data object Nebulas : Coin(
         index = 2718L,
         name = "Nebulas",
@@ -675,6 +758,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nebulas/info/logo.png"
     )
 
+    @Serializable
     data object Hedera : Coin(
         index = 3030L,
         name = "Hedera",
@@ -683,6 +767,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/hedera/info/logo.png"
     )
 
+    @Serializable
     data object Merlin : Coin(
         index = 4200L,
         name = "Merlin",
@@ -691,6 +776,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/merlin/info/logo.png"
     )
 
+    @Serializable
     data object Mantle : Coin(
         index = 5000L,
         name = "Mantle",
@@ -699,6 +785,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/mantle/info/logo.png"
     )
 
+    @Serializable
     data object BNBGreenfield : Coin(
         index = 5600L,
         name = "BNB Greenfield",
@@ -707,6 +794,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/greenfield/info/logo.png"
     )
 
+    @Serializable
     data object BounceBit : Coin(
         index = 6001L,
         name = "BounceBit",
@@ -715,6 +803,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/bouncebit/info/logo.png"
     )
 
+    @Serializable
     data object GoChain : Coin(
         index = 6060L,
         name = "GoChain",
@@ -723,6 +812,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/gochain/info/logo.png"
     )
 
+    @Serializable
     data object ZenEon : Coin(
         index = 7332L,
         name = "Zen EON",
@@ -731,6 +821,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zeneon/info/logo.png"
     )
 
+    @Serializable
     data object Base : Coin(
         index = 8453L,
         name = "Base",
@@ -739,6 +830,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/base/info/logo.png"
     )
 
+    @Serializable
     data object Nuls : Coin(
         index = 8964L,
         name = "Nuls",
@@ -747,6 +839,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nuls/info/logo.png"
     )
 
+    @Serializable
     data object Wax : Coin(
         index = 14001L,
         name = "Wax",
@@ -755,6 +848,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/wax/info/logo.png"
     )
 
+    @Serializable
     data object Meter : Coin(
         index = 18000L,
         name = "Meter",
@@ -763,6 +857,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/meter/info/logo.png"
     )
 
+    @Serializable
     data object Flux : Coin(
         index = 19167L,
         name = "Flux",
@@ -771,6 +866,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zelcash/info/logo.png"
     )
 
+    @Serializable
     data object Celo : Coin(
         index = 52752L,
         name = "Celo",
@@ -779,6 +875,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/celo/info/logo.png"
     )
 
+    @Serializable
     data object Linea : Coin(
         index = 59144L,
         name = "Linea",
@@ -787,6 +884,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/info/logo.png"
     )
 
+    @Serializable
     data object Stratis : Coin(
         index = 105105L,
         name = "Stratis",
@@ -795,6 +893,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/stratis/info/logo.png"
     )
 
+    @Serializable
     data object Scroll : Coin(
         index = 534352L,
         name = "Scroll",
@@ -803,6 +902,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/scroll/info/logo.png"
     )
 
+    @Serializable
     data object ZkLinkNovaMainnet : Coin(
         index = 810180L,
         name = "zkLink Nova Mainnet",
@@ -811,6 +911,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zklinknova/info/logo.png"
     )
 
+    @Serializable
     data object Wanchain : Coin(
         index = 5718350L,
         name = "Wanchain",
@@ -819,6 +920,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/wanchain/info/logo.png"
     )
 
+    @Serializable
     data object Waves : Coin(
         index = 5741564L,
         name = "Waves",
@@ -827,6 +929,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/waves/info/logo.png"
     )
 
+    @Serializable
     data object CronosChain : Coin(
         index = 10000025L,
         name = "Cronos Chain",
@@ -835,6 +938,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/cronos/info/logo.png"
     )
 
+    @Serializable
     data object NativeInjective : Coin(
         index = 10000060L,
         name = "Native Injective",
@@ -843,6 +947,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nativeinjective/info/logo.png"
     )
 
+    @Serializable
     data object OPMainnet : Coin(
         index = 10000070L,
         name = "OP Mainnet",
@@ -851,6 +956,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/optimism/info/logo.png"
     )
 
+    @Serializable
     data object GnosisChain : Coin(
         index = 10000100L,
         name = "Gnosis Chain",
@@ -859,6 +965,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/xdai/info/logo.png"
     )
 
+    @Serializable
     data object Osmosis : Coin(
         index = 10000118L,
         name = "Osmosis",
@@ -867,6 +974,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/osmosis/info/logo.png"
     )
 
+    @Serializable
     data object SmartBitcoinCash : Coin(
         index = 10000145L,
         name = "Smart Bitcoin Cash",
@@ -875,6 +983,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartbch/info/logo.png"
     )
 
+    @Serializable
     data object Fantom : Coin(
         index = 10000250L,
         name = "Fantom",
@@ -883,6 +992,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/fantom/info/logo.png"
     )
 
+    @Serializable
     data object Boba : Coin(
         index = 10000288L,
         name = "Boba",
@@ -891,6 +1001,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/boba/info/logo.png"
     )
 
+    @Serializable
     data object KuCoinCommunityChain : Coin(
         index = 10000321L,
         name = "KuCoin Community Chain",
@@ -899,6 +1010,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/kcc/info/logo.png"
     )
 
+    @Serializable
     data object ZkSyncEra : Coin(
         index = 10000324L,
         name = "zkSync Era",
@@ -907,6 +1019,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zksync/info/logo.png"
     )
 
+    @Serializable
     data object Terra : Coin(
         index = 10000330L,
         name = "Terra",
@@ -915,6 +1028,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/terrav2/info/logo.png"
     )
 
+    @Serializable
     data object HuobiECOChain : Coin(
         index = 10000553L,
         name = "Huobi ECO Chain",
@@ -923,6 +1037,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/heco/info/logo.png"
     )
 
+    @Serializable
     data object AcalaEVM : Coin(
         index = 10000787L,
         name = "Acala EVM",
@@ -931,6 +1046,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/acalaevm/info/logo.png"
     )
 
+    @Serializable
     data object Coreum : Coin(
         index = 10000990L,
         name = "Coreum",
@@ -939,6 +1055,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/coreum/info/logo.png"
     )
 
+    @Serializable
     data object Metis : Coin(
         index = 10001088L,
         name = "Metis",
@@ -947,6 +1064,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/metis/info/logo.png"
     )
 
+    @Serializable
     data object PolygonZkEVM : Coin(
         index = 10001101L,
         name = "Polygon zkEVM",
@@ -955,6 +1073,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/polygonzkevm/info/logo.png"
     )
 
+    @Serializable
     data object Moonbeam : Coin(
         index = 10001284L,
         name = "Moonbeam",
@@ -963,6 +1082,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/moonbeam/info/logo.png"
     )
 
+    @Serializable
     data object Moonriver : Coin(
         index = 10001285L,
         name = "Moonriver",
@@ -971,6 +1091,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/moonriver/info/logo.png"
     )
 
+    @Serializable
     data object Ronin : Coin(
         index = 10002020L,
         name = "Ronin",
@@ -979,6 +1100,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ronin/info/logo.png"
     )
 
+    @Serializable
     data object KavaEvm : Coin(
         index = 10002222L,
         name = "KavaEvm",
@@ -987,6 +1109,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/kavaevm/info/logo.png"
     )
 
+    @Serializable
     data object IoTeXEVM : Coin(
         index = 10004689L,
         name = "IoTeX EVM",
@@ -995,6 +1118,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/iotexevm/info/logo.png"
     )
 
+    @Serializable
     data object NativeZetaChain : Coin(
         index = 10007000L,
         name = "NativeZetaChain",
@@ -1003,6 +1127,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zetachain/info/logo.png"
     )
 
+    @Serializable
     data object NativeCanto : Coin(
         index = 10007700L,
         name = "NativeCanto",
@@ -1011,6 +1136,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nativecanto/info/logo.png"
     )
 
+    @Serializable
     data object Klaytn : Coin(
         index = 10008217L,
         name = "Klaytn",
@@ -1019,6 +1145,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/klaytn/info/logo.png"
     )
 
+    @Serializable
     data object AvalancheCChain : Coin(
         index = 10009000L,
         name = "Avalanche C-Chain",
@@ -1027,6 +1154,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/avalanchec/info/logo.png"
     )
 
+    @Serializable
     data object Evmos : Coin(
         index = 10009001L,
         name = "Evmos",
@@ -1035,6 +1163,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/evmos/info/logo.png"
     )
 
+    @Serializable
     data object ArbitrumNova : Coin(
         index = 10042170L,
         name = "Arbitrum Nova",
@@ -1043,6 +1172,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/arbitrumnova/info/logo.png"
     )
 
+    @Serializable
     data object Arbitrum : Coin(
         index = 10042221L,
         name = "Arbitrum",
@@ -1051,6 +1181,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/arbitrum/info/logo.png"
     )
 
+    @Serializable
     data object Sommelier : Coin(
         index = 11000118L,
         name = "Sommelier",
@@ -1059,6 +1190,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/sommelier/info/logo.png"
     )
 
+    @Serializable
     data object FetchAI : Coin(
         index = 12000118L,
         name = "Fetch AI",
@@ -1067,6 +1199,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/fetchai/info/logo.png"
     )
 
+    @Serializable
     data object MarsHub : Coin(
         index = 13000118L,
         name = "Mars Hub",
@@ -1075,6 +1208,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/mars/info/logo.png"
     )
 
+    @Serializable
     data object Umee : Coin(
         index = 14000118L,
         name = "Umee",
@@ -1083,6 +1217,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/umee/info/logo.png"
     )
 
+    @Serializable
     data object Quasar : Coin(
         index = 15000118L,
         name = "Quasar",
@@ -1091,6 +1226,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/quasar/info/logo.png"
     )
 
+    @Serializable
     data object Persistence : Coin(
         index = 16000118L,
         name = "Persistence",
@@ -1099,6 +1235,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/persistence/info/logo.png"
     )
 
+    @Serializable
     data object Akash : Coin(
         index = 17000118L,
         name = "Akash",
@@ -1107,6 +1244,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/akash/info/logo.png"
     )
 
+    @Serializable
     data object Noble : Coin(
         index = 18000118L,
         name = "Noble",
@@ -1115,6 +1253,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/noble/info/logo.png"
     )
 
+    @Serializable
     data object Sei : Coin(
         index = 19000118L,
         name = "Sei",
@@ -1123,6 +1262,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/sei/info/logo.png"
     )
 
+    @Serializable
     data object Stargaze : Coin(
         index = 20000118L,
         name = "Stargaze",
@@ -1131,6 +1271,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/stargaze/info/logo.png"
     )
 
+    @Serializable
     data object BNBSmartChain : Coin(
         index = 20000714L,
         name = "BNB Smart Chain",
@@ -1139,6 +1280,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/info/logo.png"
     )
 
+    @Serializable
     data object ZetaEVM : Coin(
         index = 20007000L,
         name = "Zeta EVM",
@@ -1147,6 +1289,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/zetaevm/info/logo.png"
     )
 
+    @Serializable
     data object NativeEvmos : Coin(
         index = 20009001L,
         name = "Native Evmos",
@@ -1155,6 +1298,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/nativeevmos/info/logo.png"
     )
 
+    @Serializable
     data object Celestia : Coin(
         index = 21000118L,
         name = "Celestia",
@@ -1163,6 +1307,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/tia/info/logo.png"
     )
 
+    @Serializable
     data object DYdX : Coin(
         index = 22000118L,
         name = "dYdX",
@@ -1171,6 +1316,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/dydx/info/logo.png"
     )
 
+    @Serializable
     data object Juno : Coin(
         index = 30000118L,
         name = "Juno",
@@ -1179,6 +1325,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/juno/info/logo.png"
     )
 
+    @Serializable
     data object Tbnb : Coin(
         index = 30000714L,
         name = "TBNB",
@@ -1187,6 +1334,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/tbinance/info/logo.png"
     )
 
+    @Serializable
     data object Stride : Coin(
         index = 40000118L,
         name = "Stride",
@@ -1195,6 +1343,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/stride/info/logo.png"
     )
 
+    @Serializable
     data object Axelar : Coin(
         index = 50000118L,
         name = "Axelar",
@@ -1203,6 +1352,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/axelar/info/logo.png"
     )
 
+    @Serializable
     data object Crescent : Coin(
         index = 60000118L,
         name = "Crescent",
@@ -1211,6 +1361,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/crescent/info/logo.png"
     )
 
+    @Serializable
     data object Kujira : Coin(
         index = 70000118L,
         name = "Kujira",
@@ -1219,6 +1370,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/kujira/info/logo.png"
     )
 
+    @Serializable
     data object Comdex : Coin(
         index = 80000118L,
         name = "Comdex",
@@ -1227,6 +1379,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/comdex/info/logo.png"
     )
 
+    @Serializable
     data object Neutron : Coin(
         index = 90000118L,
         name = "Neutron",
@@ -1235,6 +1388,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/neutron/info/logo.png"
     )
 
+    @Serializable
     data object Neon : Coin(
         index = 245022934L,
         name = "Neon",
@@ -1243,6 +1397,7 @@ sealed class Coin(
         logoUrl = "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/neon/info/logo.png"
     )
 
+    @Serializable
     data object Aurora : Coin(
         index = 1323161554L,
         name = "Aurora",
