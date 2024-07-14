@@ -2,6 +2,7 @@ package com.orcchg.domain.model
 
 import com.orcchg.util.BigDecimalSerializer
 import com.orcchg.util.CurrencySerializer
+import com.orcchg.util.SignSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import java.math.BigDecimal
@@ -23,7 +24,7 @@ private val exoticCurrencyAmount by lazy(LazyThreadSafetyMode.NONE) { ".*\\s+[a-
 data class Money private constructor(
     @SerialName("amount") @Serializable(BigDecimalSerializer::class) val amount: BigDecimal,
     @SerialName("currency") @Serializable(CurrencySerializer::class) val currency: Currency,
-    @SerialName("sign") val sign: MoneySign
+    @SerialName("sign") @Serializable(SignSerializer::class) val sign: MoneySign
 ) {
 
     /**

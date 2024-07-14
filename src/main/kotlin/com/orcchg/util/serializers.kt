@@ -1,5 +1,6 @@
 package com.orcchg.util
 
+import com.orcchg.domain.model.MoneySign
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.PrimitiveKind
 import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
@@ -14,7 +15,7 @@ object BigDecimalSerializer : KSerializer<BigDecimal> {
     override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("decimal", PrimitiveKind.STRING)
 
     override fun serialize(encoder: Encoder, value: BigDecimal) {
-        encoder.encodeString(value.toPlainString())
+        encoder.encodeString(value.abs().toPlainString())
     }
 
     override fun deserialize(decoder: Decoder): BigDecimal {
@@ -34,5 +35,27 @@ object CurrencySerializer : KSerializer<Currency> {
     override fun deserialize(decoder: Decoder): Currency {
         val currencyCode = decoder.decodeString()
         return Currency.getInstance(currencyCode)
+    }
+}
+
+object SignSerializer : KSerializer<MoneySign> {
+
+    override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("sign", PrimitiveKind.STRING)
+
+    override fun serialize(encoder: Encoder, value: MoneySign) {
+        val ch = when (value) {
+            MoneySign.MINUS -> "-"
+            MoneySign.PLUS -> "+"
+        }
+        encoder.encodeString(ch)
+    }
+
+    override fun deserialize(decoder: Decoder): MoneySign {
+        val ch = decoder.decodeString()
+        return when (ch) {
+            "-" -> MoneySign.MINUS
+            "+" -> MoneySign.PLUS
+            else -> MoneySign.PLUS
+        }
     }
 }
