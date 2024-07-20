@@ -2,6 +2,8 @@ package com.orcchg.services
 
 import com.orcchg.di.Qualifier
 import com.orcchg.di.commonModule
+import com.orcchg.util.logger.DebugLogger
+import com.orcchg.util.logger.Logger
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
 import io.ktor.server.netty.*
@@ -13,6 +15,7 @@ import org.koin.ktor.plugin.Koin
 fun main(args: Array<String>): Unit = EngineMain.main(args)
 
 fun Application.module() {
+    Logger.install(DebugLogger())
     configureContentNegotiation()
     configureKoin()
     configureRoutes(repository = get(qualifier = named(Qualifier.IN_MEMORY)))
