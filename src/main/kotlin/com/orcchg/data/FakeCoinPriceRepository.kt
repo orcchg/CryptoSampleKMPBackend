@@ -16,7 +16,7 @@ internal data class PriceAndDelta(
             deltaPercentage: Double = 5.0,
             rng: Random = Random.Default
         ): PriceAndDelta =
-            PriceAndDelta(price = price, delta = rng.nextDouble(0.0, price * deltaPercentage / 100))
+            PriceAndDelta(price = price, delta = rng.nextDouble(0.0, price * deltaPercentage / 100.0))
     }
 }
 
@@ -27,8 +27,8 @@ internal class FakeCoinPriceRepository : CoinPriceRepository {
             val priceAndDelta = getFakeCoinPriceAndDeltaByIndexOrNull(index = index)
             PricedCoin(
                 coin = coin,
-                price = priceAndDelta?.price?.money() ?: Money.ZERO,
-                delta = priceAndDelta?.delta?.money() ?: Money.ZERO
+                price = priceAndDelta?.price?.money(scale = 10) ?: Money.ZERO,
+                delta = priceAndDelta?.delta?.money(scale = 10) ?: Money.ZERO
             )
         }
 

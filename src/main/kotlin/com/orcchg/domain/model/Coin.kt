@@ -12,7 +12,7 @@ sealed class Coin(
     @SerialName("logoUrl") val logoUrl: String
 ) {
     @Serializable
-    data object Bitcoin : Coin(
+    class Bitcoin : Coin(
         index = 0L,
         name = "Bitcoin",
         symbol = "BTC",
@@ -21,7 +21,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Litecoin : Coin(
+    class Litecoin : Coin(
         index = 2L,
         name = "Litecoin",
         symbol = "LTC",
@@ -30,7 +30,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Dogecoin : Coin(
+    class Dogecoin : Coin(
         index = 3L,
         name = "Dogecoin",
         symbol = "DOGE",
@@ -39,7 +39,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Dash : Coin(
+    class Dash : Coin(
         index = 5L,
         name = "Dash",
         symbol = "DASH",
@@ -48,7 +48,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Viacoin : Coin(
+    class Viacoin : Coin(
         index = 14L,
         name = "Viacoin",
         symbol = "VIA",
@@ -57,7 +57,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Groestlcoin : Coin(
+    class Groestlcoin : Coin(
         index = 17L,
         name = "Groestlcoin",
         symbol = "GRS",
@@ -66,7 +66,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object DigiByte : Coin(
+    class DigiByte : Coin(
         index = 20L,
         name = "DigiByte",
         symbol = "DGB",
@@ -75,7 +75,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Monacoin : Coin(
+    class Monacoin : Coin(
         index = 22L,
         name = "Monacoin",
         symbol = "MONA",
@@ -84,7 +84,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Decred : Coin(
+    class Decred : Coin(
         index = 42L,
         name = "Decred",
         symbol = "DCR",
@@ -93,7 +93,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Syscoin : Coin(
+    class Syscoin : Coin(
         index = 57L,
         name = "Syscoin",
         symbol = "SYS",
@@ -102,7 +102,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Ethereum : Coin(
+    class Ethereum : Coin(
         index = 60L,
         name = "Ethereum",
         symbol = "ETH",
@@ -111,7 +111,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object EthereumClassic : Coin(
+    class EthereumClassic : Coin(
         index = 61L,
         name = "Ethereum Classic",
         symbol = "ETC",
@@ -120,7 +120,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Icon : Coin(
+    class Icon : Coin(
         index = 74L,
         name = "ICON",
         symbol = "ICX",
@@ -129,7 +129,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Verge : Coin(
+    class Verge : Coin(
         index = 77L,
         name = "Verge",
         symbol = "XVG",
@@ -138,7 +138,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object CosmosHub : Coin(
+    class CosmosHub : Coin(
         index = 118L,
         name = "Cosmos Hub",
         symbol = "ATOM",
@@ -147,7 +147,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Pivx : Coin(
+    class Pivx : Coin(
         index = 119L,
         name = "Pivx",
         symbol = "PIVX",
@@ -156,7 +156,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Zen : Coin(
+    class Zen : Coin(
         index = 121L,
         name = "Zen",
         symbol = "ZEN",
@@ -165,7 +165,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Zcash : Coin(
+    class Zcash : Coin(
         index = 133L,
         name = "Zcash",
         symbol = "ZEC",
@@ -174,7 +174,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Firo : Coin(
+    class Firo : Coin(
         index = 136L,
         name = "Firo",
         symbol = "FIRO",
@@ -183,7 +183,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Rootstock : Coin(
+    class Rootstock : Coin(
         index = 137L,
         name = "Rootstock",
         symbol = "RBTC",
@@ -192,7 +192,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Komodo : Coin(
+    class Komodo : Coin(
         index = 141L,
         name = "Komodo",
         symbol = "KMD",
@@ -201,7 +201,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Ripple : Coin(
+    class Ripple : Coin(
         index = 144L,
         name = "Ripple",
         symbol = "XRP",
@@ -210,7 +210,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object BitcoinCash : Coin(
+    class BitcoinCash : Coin(
         index = 145L,
         name = "Bitcoin Cash",
         symbol = "BCH",
@@ -219,7 +219,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Nebl : Coin(
+    class Nebl : Coin(
         index = 146L,
         name = "Nebl",
         symbol = "NEBL",
@@ -228,7 +228,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Stellar : Coin(
+    class Stellar : Coin(
         index = 148L,
         name = "Stellar",
         symbol = "XLM",
@@ -237,7 +237,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object BitcoinGold : Coin(
+    class BitcoinGold : Coin(
         index = 156L,
         name = "Bitcoin Gold",
         symbol = "BTG",
@@ -246,7 +246,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Nano : Coin(
+    class Nano : Coin(
         index = 165L,
         name = "Nano",
         symbol = "XNO",
@@ -255,7 +255,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object MantaPacific : Coin(
+    class MantaPacific : Coin(
         index = 169L,
         name = "Manta Pacific",
         symbol = "ETH",
@@ -264,7 +264,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Ravencoin : Coin(
+    class Ravencoin : Coin(
         index = 175L,
         name = "Ravencoin",
         symbol = "RVN",
@@ -273,7 +273,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object PoaNetwork : Coin(
+    class PoaNetwork : Coin(
         index = 178L,
         name = "POA Network",
         symbol = "POA",
@@ -282,7 +282,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Eos : Coin(
+    class Eos : Coin(
         index = 194L,
         name = "Eos",
         symbol = "EOS",
@@ -291,7 +291,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Tron : Coin(
+    class Tron : Coin(
         index = 195L,
         name = "Tron",
         symbol = "TRX",
@@ -300,7 +300,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object OpBNB : Coin(
+    class OpBNB : Coin(
         index = 204L,
         name = "OpBNB",
         symbol = "BNB",
@@ -309,7 +309,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object InternetComputer : Coin(
+    class InternetComputer : Coin(
         index = 223L,
         name = "Internet Computer",
         symbol = "ICP",
@@ -318,7 +318,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Fio : Coin(
+    class Fio : Coin(
         index = 235L,
         name = "Fio",
         symbol = "FIO",
@@ -327,7 +327,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Nimiq : Coin(
+    class Nimiq : Coin(
         index = 242L,
         name = "Nimiq",
         symbol = "NIM",
@@ -336,7 +336,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Algorand : Coin(
+    class Algorand : Coin(
         index = 283L,
         name = "Algorand",
         symbol = "ALGO",
@@ -345,7 +345,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Iost : Coin(
+    class Iost : Coin(
         index = 291L,
         name = "Iost",
         symbol = "IOST",
@@ -354,7 +354,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object IoTeX : Coin(
+    class IoTeX : Coin(
         index = 304L,
         name = "IoTeX",
         symbol = "IOTX",
@@ -363,7 +363,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Nervos : Coin(
+    class Nervos : Coin(
         index = 309L,
         name = "Nervos",
         symbol = "CKB",
@@ -372,7 +372,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Zilliqa : Coin(
+    class Zilliqa : Coin(
         index = 313L,
         name = "Zilliqa",
         symbol = "ZIL",
@@ -381,7 +381,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object TerraClassic : Coin(
+    class TerraClassic : Coin(
         index = 330L,
         name = "Terra Classic",
         symbol = "LUNC",
@@ -390,7 +390,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Polkadot : Coin(
+    class Polkadot : Coin(
         index = 354L,
         name = "Polkadot",
         symbol = "DOT",
@@ -399,7 +399,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object ThetaFuel : Coin(
+    class ThetaFuel : Coin(
         index = 361L,
         name = "Theta Fuel",
         symbol = "TFUEL",
@@ -408,7 +408,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object CryptoOrg : Coin(
+    class CryptoOrg : Coin(
         index = 394L,
         name = "Crypto.org",
         symbol = "CRO",
@@ -417,7 +417,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Everscale : Coin(
+    class Everscale : Coin(
         index = 396L,
         name = "Everscale",
         symbol = "EVER",
@@ -426,7 +426,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Near : Coin(
+    class Near : Coin(
         index = 397L,
         name = "Near",
         symbol = "NEAR",
@@ -435,7 +435,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Aion : Coin(
+    class Aion : Coin(
         index = 425L,
         name = "Aion",
         symbol = "AION",
@@ -444,7 +444,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Kusama : Coin(
+    class Kusama : Coin(
         index = 434L,
         name = "Kusama",
         symbol = "KSM",
@@ -453,7 +453,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Aeternity : Coin(
+    class Aeternity : Coin(
         index = 457L,
         name = "Aeternity",
         symbol = "AE",
@@ -462,7 +462,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Kava : Coin(
+    class Kava : Coin(
         index = 459L,
         name = "Kava",
         symbol = "KAVA",
@@ -471,7 +471,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Filecoin : Coin(
+    class Filecoin : Coin(
         index = 461L,
         name = "Filecoin",
         symbol = "FIL",
@@ -480,7 +480,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Oasis : Coin(
+    class Oasis : Coin(
         index = 474L,
         name = "Oasis",
         symbol = "ROSE",
@@ -489,7 +489,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Bluzelle : Coin(
+    class Bluzelle : Coin(
         index = 483L,
         name = "Bluzelle",
         symbol = "BLZ",
@@ -498,7 +498,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object BandChain : Coin(
+    class BandChain : Coin(
         index = 494L,
         name = "BandChain",
         symbol = "BAND",
@@ -507,7 +507,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Theta : Coin(
+    class Theta : Coin(
         index = 500L,
         name = "Theta",
         symbol = "THETA",
@@ -516,7 +516,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Solana : Coin(
+    class Solana : Coin(
         index = 501L,
         name = "Solana",
         symbol = "SOL",
@@ -525,7 +525,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object MultiversX : Coin(
+    class MultiversX : Coin(
         index = 508L,
         name = "MultiversX",
         symbol = "eGLD",
@@ -534,7 +534,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Secret : Coin(
+    class Secret : Coin(
         index = 529L,
         name = "Secret",
         symbol = "SCRT",
@@ -543,7 +543,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Agoric : Coin(
+    class Agoric : Coin(
         index = 564L,
         name = "Agoric",
         symbol = "BLD",
@@ -552,7 +552,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Ton : Coin(
+    class Ton : Coin(
         index = 607L,
         name = "Ton",
         symbol = "TON",
@@ -561,7 +561,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Aptos : Coin(
+    class Aptos : Coin(
         index = 637L,
         name = "Aptos",
         symbol = "APT",
@@ -570,7 +570,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object BNBBeaconChain : Coin(
+    class BNBBeaconChain : Coin(
         index = 714L,
         name = "BNB Beacon Chain",
         symbol = "BNB",
@@ -579,7 +579,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Sui : Coin(
+    class Sui : Coin(
         index = 784L,
         name = "Sui",
         symbol = "SUI",
@@ -588,7 +588,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Acala : Coin(
+    class Acala : Coin(
         index = 787L,
         name = "Acala",
         symbol = "ACA",
@@ -597,7 +597,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object VeChain : Coin(
+    class VeChain : Coin(
         index = 818L,
         name = "VeChain",
         symbol = "VET",
@@ -606,7 +606,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Callisto : Coin(
+    class Callisto : Coin(
         index = 820L,
         name = "Callisto",
         symbol = "CLO",
@@ -615,7 +615,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Neo : Coin(
+    class Neo : Coin(
         index = 888L,
         name = "Neo",
         symbol = "NEO",
@@ -624,7 +624,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Viction : Coin(
+    class Viction : Coin(
         index = 889L,
         name = "Viction",
         symbol = "VIC",
@@ -633,7 +633,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object ECash : Coin(
+    class ECash : Coin(
         index = 899L,
         name = "eCash",
         symbol = "XEC",
@@ -642,7 +642,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object THORChain : Coin(
+    class THORChain : Coin(
         index = 931L,
         name = "THORChain",
         symbol = "RUNE",
@@ -651,7 +651,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Polygon : Coin(
+    class Polygon : Coin(
         index = 966L,
         name = "Polygon",
         symbol = "MATIC",
@@ -660,7 +660,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object OKXChain : Coin(
+    class OKXChain : Coin(
         index = 996L,
         name = "OKX Chain",
         symbol = "OKT",
@@ -669,7 +669,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object BitcoinDiamond : Coin(
+    class BitcoinDiamond : Coin(
         index = 999L,
         name = "Bitcoin Diamond",
         symbol = "BCD",
@@ -678,7 +678,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object ThunderCore : Coin(
+    class ThunderCore : Coin(
         index = 1001L,
         name = "ThunderCore",
         symbol = "TT",
@@ -687,7 +687,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Harmony : Coin(
+    class Harmony : Coin(
         index = 1023L,
         name = "Harmony",
         symbol = "ONE",
@@ -696,7 +696,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Ontology : Coin(
+    class Ontology : Coin(
         index = 1024L,
         name = "Ontology",
         symbol = "ONT",
@@ -705,7 +705,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object ConfluxESpace : Coin(
+    class ConfluxESpace : Coin(
         index = 1030L,
         name = "Conflux eSpace",
         symbol = "CFX",
@@ -714,7 +714,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Tezos : Coin(
+    class Tezos : Coin(
         index = 1729L,
         name = "Tezos",
         symbol = "XTZ",
@@ -723,7 +723,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Cardano : Coin(
+    class Cardano : Coin(
         index = 1815L,
         name = "Cardano",
         symbol = "ADA",
@@ -732,7 +732,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object LightlinkPhoenix : Coin(
+    class LightlinkPhoenix : Coin(
         index = 1890L,
         name = "Lightlink Phoenix",
         symbol = "LL",
@@ -741,7 +741,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Qtum : Coin(
+    class Qtum : Coin(
         index = 2301L,
         name = "Qtum",
         symbol = "QTUM",
@@ -750,7 +750,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Nebulas : Coin(
+    class Nebulas : Coin(
         index = 2718L,
         name = "Nebulas",
         symbol = "NAS",
@@ -759,7 +759,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Hedera : Coin(
+    class Hedera : Coin(
         index = 3030L,
         name = "Hedera",
         symbol = "HBAR",
@@ -768,7 +768,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Merlin : Coin(
+    class Merlin : Coin(
         index = 4200L,
         name = "Merlin",
         symbol = "MERL",
@@ -777,7 +777,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Mantle : Coin(
+    class Mantle : Coin(
         index = 5000L,
         name = "Mantle",
         symbol = "MNT",
@@ -786,7 +786,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object BNBGreenfield : Coin(
+    class BNBGreenfield : Coin(
         index = 5600L,
         name = "BNB Greenfield",
         symbol = "BNB",
@@ -795,7 +795,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object BounceBit : Coin(
+    class BounceBit : Coin(
         index = 6001L,
         name = "BounceBit",
         symbol = "BB",
@@ -804,7 +804,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object GoChain : Coin(
+    class GoChain : Coin(
         index = 6060L,
         name = "GoChain",
         symbol = "GO",
@@ -813,7 +813,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object ZenEon : Coin(
+    class ZenEon : Coin(
         index = 7332L,
         name = "Zen EON",
         symbol = "ZEN",
@@ -822,7 +822,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Base : Coin(
+    class Base : Coin(
         index = 8453L,
         name = "Base",
         symbol = "ETH",
@@ -831,7 +831,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Nuls : Coin(
+    class Nuls : Coin(
         index = 8964L,
         name = "Nuls",
         symbol = "NULS",
@@ -840,7 +840,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Wax : Coin(
+    class Wax : Coin(
         index = 14001L,
         name = "Wax",
         symbol = "WAXP",
@@ -849,7 +849,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Meter : Coin(
+    class Meter : Coin(
         index = 18000L,
         name = "Meter",
         symbol = "MTR",
@@ -858,7 +858,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Flux : Coin(
+    class Flux : Coin(
         index = 19167L,
         name = "Flux",
         symbol = "FLUX",
@@ -867,7 +867,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Celo : Coin(
+    class Celo : Coin(
         index = 52752L,
         name = "Celo",
         symbol = "CELO",
@@ -876,7 +876,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Linea : Coin(
+    class Linea : Coin(
         index = 59144L,
         name = "Linea",
         symbol = "ETH",
@@ -885,7 +885,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Stratis : Coin(
+    class Stratis : Coin(
         index = 105105L,
         name = "Stratis",
         symbol = "STRAX",
@@ -894,7 +894,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Scroll : Coin(
+    class Scroll : Coin(
         index = 534352L,
         name = "Scroll",
         symbol = "ETH",
@@ -903,7 +903,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object ZkLinkNovaMainnet : Coin(
+    class ZkLinkNovaMainnet : Coin(
         index = 810180L,
         name = "zkLink Nova Mainnet",
         symbol = "ETH",
@@ -912,7 +912,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Wanchain : Coin(
+    class Wanchain : Coin(
         index = 5718350L,
         name = "Wanchain",
         symbol = "WAN",
@@ -921,7 +921,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Waves : Coin(
+    class Waves : Coin(
         index = 5741564L,
         name = "Waves",
         symbol = "WAVES",
@@ -930,7 +930,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object CronosChain : Coin(
+    class CronosChain : Coin(
         index = 10000025L,
         name = "Cronos Chain",
         symbol = "CRO",
@@ -939,7 +939,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object NativeInjective : Coin(
+    class NativeInjective : Coin(
         index = 10000060L,
         name = "Native Injective",
         symbol = "INJ",
@@ -948,7 +948,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object OPMainnet : Coin(
+    class OPMainnet : Coin(
         index = 10000070L,
         name = "OP Mainnet",
         symbol = "ETH",
@@ -957,7 +957,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object GnosisChain : Coin(
+    class GnosisChain : Coin(
         index = 10000100L,
         name = "Gnosis Chain",
         symbol = "xDAI",
@@ -966,7 +966,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Osmosis : Coin(
+    class Osmosis : Coin(
         index = 10000118L,
         name = "Osmosis",
         symbol = "OSMO",
@@ -975,7 +975,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object SmartBitcoinCash : Coin(
+    class SmartBitcoinCash : Coin(
         index = 10000145L,
         name = "Smart Bitcoin Cash",
         symbol = "BCH",
@@ -984,7 +984,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Fantom : Coin(
+    class Fantom : Coin(
         index = 10000250L,
         name = "Fantom",
         symbol = "FTM",
@@ -993,7 +993,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Boba : Coin(
+    class Boba : Coin(
         index = 10000288L,
         name = "Boba",
         symbol = "BOBAETH",
@@ -1002,7 +1002,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object KuCoinCommunityChain : Coin(
+    class KuCoinCommunityChain : Coin(
         index = 10000321L,
         name = "KuCoin Community Chain",
         symbol = "KCS",
@@ -1011,7 +1011,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object ZkSyncEra : Coin(
+    class ZkSyncEra : Coin(
         index = 10000324L,
         name = "zkSync Era",
         symbol = "ETH",
@@ -1020,7 +1020,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Terra : Coin(
+    class Terra : Coin(
         index = 10000330L,
         name = "Terra",
         symbol = "LUNA",
@@ -1029,7 +1029,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object HuobiECOChain : Coin(
+    class HuobiECOChain : Coin(
         index = 10000553L,
         name = "Huobi ECO Chain",
         symbol = "HT",
@@ -1038,7 +1038,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object AcalaEVM : Coin(
+    class AcalaEVM : Coin(
         index = 10000787L,
         name = "Acala EVM",
         symbol = "ACA",
@@ -1047,7 +1047,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Coreum : Coin(
+    class Coreum : Coin(
         index = 10000990L,
         name = "Coreum",
         symbol = "CORE",
@@ -1056,7 +1056,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Metis : Coin(
+    class Metis : Coin(
         index = 10001088L,
         name = "Metis",
         symbol = "METIS",
@@ -1065,7 +1065,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object PolygonZkEVM : Coin(
+    class PolygonZkEVM : Coin(
         index = 10001101L,
         name = "Polygon zkEVM",
         symbol = "ETH",
@@ -1074,7 +1074,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Moonbeam : Coin(
+    class Moonbeam : Coin(
         index = 10001284L,
         name = "Moonbeam",
         symbol = "GLMR",
@@ -1083,7 +1083,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Moonriver : Coin(
+    class Moonriver : Coin(
         index = 10001285L,
         name = "Moonriver",
         symbol = "MOVR",
@@ -1092,7 +1092,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Ronin : Coin(
+    class Ronin : Coin(
         index = 10002020L,
         name = "Ronin",
         symbol = "RON",
@@ -1101,7 +1101,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object KavaEvm : Coin(
+    class KavaEvm : Coin(
         index = 10002222L,
         name = "KavaEvm",
         symbol = "KAVA",
@@ -1110,7 +1110,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object IoTeXEVM : Coin(
+    class IoTeXEVM : Coin(
         index = 10004689L,
         name = "IoTeX EVM",
         symbol = "IOTX",
@@ -1119,7 +1119,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object NativeZetaChain : Coin(
+    class NativeZetaChain : Coin(
         index = 10007000L,
         name = "NativeZetaChain",
         symbol = "ZETA",
@@ -1128,7 +1128,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object NativeCanto : Coin(
+    class NativeCanto : Coin(
         index = 10007700L,
         name = "NativeCanto",
         symbol = "CANTO",
@@ -1137,7 +1137,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Klaytn : Coin(
+    class Klaytn : Coin(
         index = 10008217L,
         name = "Klaytn",
         symbol = "KLAY",
@@ -1146,7 +1146,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object AvalancheCChain : Coin(
+    class AvalancheCChain : Coin(
         index = 10009000L,
         name = "Avalanche C-Chain",
         symbol = "AVAX",
@@ -1155,7 +1155,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Evmos : Coin(
+    class Evmos : Coin(
         index = 10009001L,
         name = "Evmos",
         symbol = "EVMOS",
@@ -1164,7 +1164,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object ArbitrumNova : Coin(
+    class ArbitrumNova : Coin(
         index = 10042170L,
         name = "Arbitrum Nova",
         symbol = "ETH",
@@ -1173,7 +1173,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Arbitrum : Coin(
+    class Arbitrum : Coin(
         index = 10042221L,
         name = "Arbitrum",
         symbol = "ETH",
@@ -1182,7 +1182,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Sommelier : Coin(
+    class Sommelier : Coin(
         index = 11000118L,
         name = "Sommelier",
         symbol = "SOMM",
@@ -1191,7 +1191,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object FetchAI : Coin(
+    class FetchAI : Coin(
         index = 12000118L,
         name = "Fetch AI",
         symbol = "FET",
@@ -1200,7 +1200,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object MarsHub : Coin(
+    class MarsHub : Coin(
         index = 13000118L,
         name = "Mars Hub",
         symbol = "MARS",
@@ -1209,7 +1209,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Umee : Coin(
+    class Umee : Coin(
         index = 14000118L,
         name = "Umee",
         symbol = "UMEE",
@@ -1218,7 +1218,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Quasar : Coin(
+    class Quasar : Coin(
         index = 15000118L,
         name = "Quasar",
         symbol = "QSR",
@@ -1227,7 +1227,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Persistence : Coin(
+    class Persistence : Coin(
         index = 16000118L,
         name = "Persistence",
         symbol = "XPRT",
@@ -1236,7 +1236,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Akash : Coin(
+    class Akash : Coin(
         index = 17000118L,
         name = "Akash",
         symbol = "AKT",
@@ -1245,7 +1245,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Noble : Coin(
+    class Noble : Coin(
         index = 18000118L,
         name = "Noble",
         symbol = "USDC",
@@ -1254,7 +1254,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Sei : Coin(
+    class Sei : Coin(
         index = 19000118L,
         name = "Sei",
         symbol = "SEI",
@@ -1263,7 +1263,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Stargaze : Coin(
+    class Stargaze : Coin(
         index = 20000118L,
         name = "Stargaze",
         symbol = "STARS",
@@ -1272,7 +1272,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object BNBSmartChain : Coin(
+    class BNBSmartChain : Coin(
         index = 20000714L,
         name = "BNB Smart Chain",
         symbol = "BNB",
@@ -1281,7 +1281,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object ZetaEVM : Coin(
+    class ZetaEVM : Coin(
         index = 20007000L,
         name = "Zeta EVM",
         symbol = "ZETA",
@@ -1290,7 +1290,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object NativeEvmos : Coin(
+    class NativeEvmos : Coin(
         index = 20009001L,
         name = "Native Evmos",
         symbol = "EVMOS",
@@ -1299,7 +1299,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Celestia : Coin(
+    class Celestia : Coin(
         index = 21000118L,
         name = "Celestia",
         symbol = "TIA",
@@ -1308,7 +1308,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object DYdX : Coin(
+    class DYdX : Coin(
         index = 22000118L,
         name = "dYdX",
         symbol = "DYDX",
@@ -1317,7 +1317,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Juno : Coin(
+    class Juno : Coin(
         index = 30000118L,
         name = "Juno",
         symbol = "JUNO",
@@ -1326,7 +1326,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Tbnb : Coin(
+    class Tbnb : Coin(
         index = 30000714L,
         name = "TBNB",
         symbol = "BNB",
@@ -1335,7 +1335,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Stride : Coin(
+    class Stride : Coin(
         index = 40000118L,
         name = "Stride",
         symbol = "STRD",
@@ -1344,7 +1344,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Axelar : Coin(
+    class Axelar : Coin(
         index = 50000118L,
         name = "Axelar",
         symbol = "AXL",
@@ -1353,7 +1353,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Crescent : Coin(
+    class Crescent : Coin(
         index = 60000118L,
         name = "Crescent",
         symbol = "CRE",
@@ -1362,7 +1362,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Kujira : Coin(
+    class Kujira : Coin(
         index = 70000118L,
         name = "Kujira",
         symbol = "KUJI",
@@ -1371,7 +1371,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Comdex : Coin(
+    class Comdex : Coin(
         index = 80000118L,
         name = "Comdex",
         symbol = "CMDX",
@@ -1380,7 +1380,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Neutron : Coin(
+    class Neutron : Coin(
         index = 90000118L,
         name = "Neutron",
         symbol = "NTRN",
@@ -1389,7 +1389,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Neon : Coin(
+    class Neon : Coin(
         index = 245022934L,
         name = "Neon",
         symbol = "NEON",
@@ -1398,7 +1398,7 @@ sealed class Coin(
     )
 
     @Serializable
-    data object Aurora : Coin(
+    class Aurora : Coin(
         index = 1323161554L,
         name = "Aurora",
         symbol = "ETH",

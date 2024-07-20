@@ -65,7 +65,7 @@ data class Money private constructor(
     }
 
     operator fun div(amount: BigDecimal): Money {
-        val balance = amount().divide(amount, 2, RoundingMode.HALF_UP)
+        val balance = amount().divide(amount, RoundingMode.HALF_UP)
         val sign = deduceSign(balance)
         return Money(amount = balance.abs(), currency = currency, sign = sign)
     }
@@ -163,9 +163,10 @@ data class Money private constructor(
         fun by(
             amount: Double,
             currency: Currency = Currency.getInstance(Locale.DEFAULT),
-            sign: MoneySign = if (amount >= 0) MoneySign.PLUS else MoneySign.MINUS
+            sign: MoneySign = if (amount >= 0) MoneySign.PLUS else MoneySign.MINUS,
+            scale: Int = 2
         ): Money =
-            Money(BigDecimal.valueOf(amount).abs().setScale(2, RoundingMode.HALF_UP), currency, sign)
+            Money(BigDecimal.valueOf(amount).abs().setScale(scale, RoundingMode.HALF_UP), currency, sign)
 
         fun by(
             amount: BigDecimal,
@@ -175,9 +176,10 @@ data class Money private constructor(
             Money(amount.abs(), currency, sign)
 
         fun zero(
-            currency: Currency = Currency.getInstance(Locale.DEFAULT)
+            currency: Currency = Currency.getInstance(Locale.DEFAULT),
+            scale: Int = 2
         ): Money =
-            by(BigDecimal.ZERO.setScale(2, RoundingMode.HALF_UP), currency, MoneySign.PLUS)
+            by(BigDecimal.ZERO.setScale(scale, RoundingMode.HALF_UP), currency, MoneySign.PLUS)
 
         fun isZero(amount: BigDecimal): Boolean =
             amount.compareTo(BigDecimal.ZERO) == 0
@@ -313,14 +315,14 @@ data class RealNoZeroSign(private val isZero: Boolean) : SignToStringStrategy() 
 }
 
 fun BigDecimal.money(currency: Currency = Currency.getInstance(Locale.DEFAULT)): Money = Money.by(this, currency)
-fun Double.money(currency: Currency = Currency.getInstance(Locale.DEFAULT)): Money = Money.by(this, currency)
+fun Double.money(currency: Currency = Currency.getInstance(Locale.DEFAULT), scale: Int = 2): Money = Money.by(this, currency, scale = scale)
 fun Int.money(currency: Currency = Currency.getInstance(Locale.DEFAULT)): Money =
     Money.by(BigDecimal.valueOf(this.toLong()), currency)
 fun Long.money(currency: Currency = Currency.getInstance(Locale.DEFAULT)): Money =
     Money.by(BigDecimal.valueOf(this), currency)
 
 operator fun Money.div(r: Double): Money =
-    Money.by(amount().divide(BigDecimal.valueOf(r), 2, RoundingMode.HALF_UP), currency)
+    Money.by(amount().divide(BigDecimal.valueOf(r), RoundingMode.HALF_UP), currency)
 operator fun Money.times(r: Double): Money = Money.by(amount().times(BigDecimal.valueOf(r)), currency)
 
 fun formatPriceChange(price: Money, change: Money): String {
