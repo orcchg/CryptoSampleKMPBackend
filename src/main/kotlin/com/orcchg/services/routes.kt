@@ -22,11 +22,11 @@ internal fun Application.configureRoutes(repository: CryptoRepository) {
                     Logger.d(message = "<-- 200 response success [/coins]: $it")
                     call.respond(HttpStatusCode.OK, it)
                 }
-                .onFailure {
-                    Logger.d(message = "<-- 400 response error [/coins]: $it")
+                .onFailure { e ->
+                    Logger.d(message = "<-- 400 response error [/coins]: $e")
                     call.respond(
                         status = HttpStatusCode.BadRequest,
-                        message = "${it.message}"
+                        message = "${e.message}"
                     )
                 }
         }

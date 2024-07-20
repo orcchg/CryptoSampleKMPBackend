@@ -2,6 +2,8 @@ package com.orcchg.domain.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 
 @Serializable
 sealed class Coin(
@@ -11,6 +13,8 @@ sealed class Coin(
     @SerialName("url") val url: String,
     @SerialName("logoUrl") val logoUrl: String
 ) {
+    override fun toString(): String = Json.encodeToString(this)
+
     @Serializable
     class Bitcoin : Coin(
         index = 0L,
