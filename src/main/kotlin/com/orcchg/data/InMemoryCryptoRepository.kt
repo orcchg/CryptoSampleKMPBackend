@@ -12,7 +12,7 @@ internal class InMemoryCryptoRepository(
         if (limit < 0 || offset < 0) {
             throw IllegalArgumentException("limit $limit and offset $offset must not be negative")
         }
-        if (limit == 0 || offset >= allCoins.size) {
+        if (allCoins.isEmpty() || limit == 0 || offset >= allCoins.size) {
             return CoinsPage(offset = offset, total = allCoins.size)
         }
 
